@@ -1,0 +1,125 @@
+﻿@model VinylPlate
+
+<form method="post" asp-action="Upsert" enctype="multipart/form-data">
+	<div class="border p-3 mt-4">
+		<div class="row pb-2">
+	<input asp-for="Id" hidden />
+	<input asp-for="ImageUrl" hidden />
+
+	<div class="row">
+		<div class="col-2 pt-4">
+			<img src="@Model.ImageUrl"
+			width="100%" style="border-radius:5px; border:1px solid #bbb9b9" />
+		</div>
+		<div class="col-10">
+			<div class="border p-3 mt-4 row">
+		<div class="col-12 pb-2">
+			<h2 class="text-primary">@(Model.Id!=0?"Редагувати": "Створити") вінілову платівку</h2>
+			<hr />
+		</div>
+		<div asp-validation-summary="All"></div>
+		<div class="mb-3">
+			<label asp-for="Title">Назва</label>
+			<input asp-for="Title" class="form-control" />
+			<span asp-validation-for="Title" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Code">Код</label>
+			<input asp-for="Code" class="form-control" />
+			<span asp-validation-for="Code" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Description">Опис</label>
+			<textarea asp-for="Description" rows="3" class="form-control"></textarea>
+			<span asp-validation-for="Description" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="ListPrice">Ціна</label>
+			<input asp-for="ListPrice" class="form-control" />
+			<span asp-validation-for="ListPrice" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Year">Рік</label>
+			<input asp-for="Year" class="form-control" />
+			<span asp-validation-for="Year" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Country">Країна</label>
+			<input asp-for="Country" class="form-control" />
+			<span asp-validation-for="Country" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Format">Формат</label>
+			<select asp-for="Format" class="form-select">
+				<option disabled selected>--Обрати формат--</option>
+				<option>EP</option>
+				<option>LP</option>
+				<option>SP</option>
+			</select>
+			<span asp-validation-for="Format" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Size">Розмір платівки</label>
+			<input asp-for="Size" class="form-control" />
+			<span asp-validation-for="Size" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Price">Ціна за 1-10 платівок</label>
+			<input asp-for="Price" class="form-control" />
+			<span asp-validation-for="Price" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Price10">Ціна за 10-50 платівок</label>
+			<input asp-for="Price10" class="form-control" />
+			<span asp-validation-for="Price10" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Price50">Ціна за 50+ платівок</label>
+			<input asp-for="Price50" class="form-control" />
+			<span asp-validation-for="Price50" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="ImageUrl">Обкладинка платівки</label>
+			<input type="file" name="file" class="form-control" />
+		</div>
+		<div class="mb-3">
+			<label asp-for="CategoryId">Жанр</label>
+			<select asp-for="CategoryId" asp-items="ViewBag.CategoryList" class="form-select">
+				<option disabled selected>--Обрати жанр--</option>
+			</select>
+			<span asp-validation-for="CategoryId" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="AuthorId">Автор</label>
+			<select asp-for="AuthorId" asp-items="ViewBag.AuthorList" class="form-select">
+				<option disabled selected>--Обрати автора--</option>
+			</select>
+			<span asp-validation-for="AuthorId" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="LabelId">Лейбл</label>
+			<select asp-for="LabelId" asp-items="ViewBag.LabelList" class="form-select">
+				<option disabled selected>--Обрати лейбл--</option>
+			</select>
+			<span asp-validation-for="LabelId" class="text-danger"></span>
+		</div>
+		@if (Model.Id != 0)
+			{
+				<button type="submit" class="btn btn-primary" style="width:150px">Оновити</button>
+			}
+			else
+			{
+				<button type="submit" class="btn btn-primary" style="width:150px">Створити</button>
+			}
+			
+		<a asp-controller="VinylPlate" asp-action="Index" class="btn btn-secondary" style="width:150px">
+			Повернутися до списку
+		</a>
+	</div>
+</form>
+
+@section Scripts{
+	@{
+			<partial name="_ValidationScriptsPartial" />
+	}
+}

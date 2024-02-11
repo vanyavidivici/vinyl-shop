@@ -1,0 +1,75 @@
+﻿@{
+    var status = Context.Request.Query["status"];
+     var pending="text-primary";
+     var inprocess="text-primary";
+     var completed="text-primary";
+     
+     
+     var all="text-primary";
+
+    switch (status)
+    {
+        case "pending":
+            pending = "active text-white";
+            break;
+            case "inprocess":
+            inprocess = "active text-white";
+            break;
+            case "completed":
+            completed = "active text-white";
+            break;
+            
+            default:
+            all = "active text-white";
+            break;
+    }
+
+}
+
+
+<div class="p-3">
+    <div class="d-flex justify-content-between pt-4">
+        <div class="p-2">
+            <h2 class="text-primary">Список замовлень</h2>
+		</div>
+        <div class="p-2">
+            <ul class="list-group list-group-horizontal-sm">
+                <a style="text-decoration:none;" asp-controller="Order"
+                    asp-action="Index" asp-route-status="inprocess">
+                    <li class="list-group-item" @inprocess>В процесі</li>
+                </a>
+                
+                <a style="text-decoration:none;" asp-controller="Order"
+                    asp-action="Index" asp-route-status="completed">
+                    <li class="list-group-item" @completed>Завершено</li>
+                </a>
+                <a style="text-decoration:none;" asp-controller="Order"
+                    asp-action="Index" asp-route-status="all">
+                    <li class="list-group-item" @all>Всі</li>
+                </a>
+                @*pending*@
+            </ul>
+            <input class="btn btn-primary form-control" type=button name=print value="Роздрукувати список замовлень" onclick="javascript:window.print()" style="background: #3498db;margin-top: 10px">
+            </div>
+	</div>
+    <br /><br />
+
+<table  id="tblData"  class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Ім'я</th>
+            <th>Номер телефону</th>
+            <th>Дата</th>
+            <th>Електронна пошта</th>
+            <th>Статус</th>
+            <th>Сума</th>
+            <th></th>
+		</tr>
+	</thead>
+</table>
+</div>
+
+@section Scripts{
+    <script src="~/js/order.js"></script>
+}

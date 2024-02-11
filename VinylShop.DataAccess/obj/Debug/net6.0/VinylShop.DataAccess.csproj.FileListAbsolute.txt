@@ -1,0 +1,17 @@
+C:\Users\Ivan Bashenko\Desktop\coursework\VinylShop\VinylShop.DataAccess\bin\Debug\net6.0\VinylShop.DataAccess.deps.json
+C:\Users\Ivan Bashenko\Desktop\coursework\VinylShop\VinylShop.DataAccess\bin\Debug\net6.0\VinylShop.DataAccess.runtimeconfig.json
+C:\Users\Ivan Bashenko\Desktop\coursework\VinylShop\VinylShop.DataAccess\bin\Debug\net6.0\VinylShop.DataAccess.dll
+C:\Users\Ivan Bashenko\Desktop\coursework\VinylShop\VinylShop.DataAccess\bin\Debug\net6.0\VinylShop.DataAccess.pdb
+C:\Users\Ivan Bashenko\Desktop\coursework\VinylShop\VinylShop.DataAccess\bin\Debug\net6.0\VinylShop.Models.dll
+C:\Users\Ivan Bashenko\Desktop\coursework\VinylShop\VinylShop.DataAccess\bin\Debug\net6.0\VinylShop.Models.pdb
+C:\Users\Ivan Bashenko\Desktop\coursework\VinylShop\VinylShop.DataAccess\obj\Debug\net6.0\VinylShop.DataAccess.csproj.AssemblyReference.cache
+C:\Users\Ivan Bashenko\Desktop\coursework\VinylShop\VinylShop.DataAccess\obj\Debug\net6.0\VinylShop.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ivan Bashenko\Desktop\coursework\VinylShop\VinylShop.DataAccess\obj\Debug\net6.0\VinylShop.DataAccess.AssemblyInfoInputs.cache
+C:\Users\Ivan Bashenko\Desktop\coursework\VinylShop\VinylShop.DataAccess\obj\Debug\net6.0\VinylShop.DataAccess.AssemblyInfo.cs
+C:\Users\Ivan Bashenko\Desktop\coursework\VinylShop\VinylShop.DataAccess\obj\Debug\net6.0\VinylShop.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Ivan Bashenko\Desktop\coursework\VinylShop\VinylShop.DataAccess\obj\Debug\net6.0\VinylShop.DataAccess.csproj.CopyComplete
+C:\Users\Ivan Bashenko\Desktop\coursework\VinylShop\VinylShop.DataAccess\obj\Debug\net6.0\VinylShop.DataAccess.dll
+C:\Users\Ivan Bashenko\Desktop\coursework\VinylShop\VinylShop.DataAccess\obj\Debug\net6.0\refint\VinylShop.DataAccess.dll
+C:\Users\Ivan Bashenko\Desktop\coursework\VinylShop\VinylShop.DataAccess\obj\Debug\net6.0\VinylShop.DataAccess.pdb
+C:\Users\Ivan Bashenko\Desktop\coursework\VinylShop\VinylShop.DataAccess\obj\Debug\net6.0\VinylShop.DataAccess.genruntimeconfig.cache
+C:\Users\Ivan Bashenko\Desktop\coursework\VinylShop\VinylShop.DataAccess\obj\Debug\net6.0\ref\VinylShop.DataAccess.dll

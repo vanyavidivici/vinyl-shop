@@ -1,0 +1,92 @@
+﻿@model ShoppingCart
+
+<form method="post">
+    <input hidden asp-for="VinylPlateId" />
+        <div class="card container pt-4">
+            <div class="card-header bg-primary text-light ml-0  row ">
+                <div class="col-12 col-md-6">
+                    <h1 class="text-white-50">@Model.VinylPlate.Title</h1>
+                    <p class="text-warning">Автор: @Model.VinylPlate.Author.Name</p>
+                </div>
+                <div class="col-12 col-md-6 text-end pt-4">
+                    <span class="badge bg-info pt-2" style="height:30px;">@Model.VinylPlate.Label.Name</span>
+                    <span class="badge bg-warning pt-2" style="height:30px;">@Model.VinylPlate.Category.Name</span>
+                </div>
+            </div>
+            <div class="card-body row container">
+                <div class="container rounded p-2">
+                    <div class="row">
+                        <div class="col-8 col-lg-8">
+
+                            <div class="row pl-2">
+                                <h5 class="text-primary">Код: @Model.VinylPlate.Code</h5>
+                            </div>
+                            <div class="row pl-2">
+                                @if (@Model.VinylPlate.ListPrice == @Model.VinylPlate.Price10){
+									<h5>Ціна: ₴@Model.VinylPlate.ListPrice</h5>
+								}
+								else
+								{
+									<h5>Ціна: <strike>₴@Model.VinylPlate.ListPrice</strike></h5>
+								}
+                            </div>
+                            <div class="row text-center pl-2">
+                                <div class="p-1 col-2 bg-secondary border-bottom">
+                                    <div>Кількість</div>
+                                </div>
+                                <div class="p-1 col-2 bg-secondary border-bottom">
+                                    <div>1-10</div>
+                                </div>
+                                <div class="p-1 col-2 bg-secondary border-bottom">
+                                    <div>11-50</div>
+                                </div>
+                                <div class="p-1 col-2 bg-secondary border-bottom">
+                                    <div>50+</div>
+                                </div>
+                            </div>
+                            <div class="row text-center pl-2" style="color:maroon; font-weight:bold">
+                                <div class="p-1 col-2 bg-secondary">
+                                    <div>Ціна</div>
+                                </div>
+                                <div class="p-1 col-2 bg-secondary">
+                                    <div>₴@Model.VinylPlate.Price</div>
+                                </div>
+                                <div class="p-1 col-2 bg-secondary">
+                                    <div>₴@Model.VinylPlate.Price10</div>
+                                </div>
+                                <div class="p-1 col-2 bg-secondary">
+                                    <div>₴@Model.VinylPlate.Price50</div>
+                                </div>
+                            </div>
+                            <div class="row pl-2">
+                                <p class="text-primary">@Html.Raw(Model.VinylPlate.Description)</p>
+                            </div>
+                            <div class="row pl-2">
+                                <p class="text-primary">Країна: @Html.Raw(Model.VinylPlate.Country)</p>
+                            </div>
+                            <div class="row pl-2">
+                                <p class="text-primary">Формат: @Html.Raw(Model.VinylPlate.Format)</p>
+                            </div>
+                            <div class="row pl-2">
+                                <div class="col-2 text-primary"><h4>Кількість</h4></div>
+                                <div class="col-10"><input asp-for="Count" class="form-control"  /></div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-3 offset-lg-1 text-center">
+                            <img src="@Model.VinylPlate.ImageUrl" width="100%" class="rounded" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="row">
+                    <div class="col-12 col-md-6 pb-1">
+                        <a class="btn btn-success form-control " style="height:50px;" asp-action="Index">Повернутись до головної сторінки</a>
+                    </div>
+                    <div class="col-12 col-md-6 pb-1">
+                        <button type="submit" value="Add to Cart" class="btn btn-primary form-control" style="height:50px;">Додати до корзини</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</form>

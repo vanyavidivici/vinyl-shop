@@ -1,0 +1,53 @@
+﻿<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Список вінілових програвачів</h2>
+		</div>
+        <div class="col-6 text-end">
+            <a asp-controller="VinylPlayer" asp-action="Upsert" class="btn btn-primary">
+               <i class="bi bi-plus-circle"></i> &nbsp; Створити новий програвач
+			</a>
+		</div>
+	</div>
+    <br /><br />
+<table id="vinylPlayerData" class="table table-bordered table-striped" style="width: 100%">
+    <thead>
+        <tr>
+            <th>
+                Назва
+            </th>
+            <th>
+                Виробник
+            </th>
+            <th>
+                Опис
+            </th>
+           <th>
+                Тип підключення
+            </th>
+            <th>
+                Швидкість
+            </th>
+            <th>
+                Тип мотору
+            </th>
+            <th>
+                Розміри
+            </th>
+            <th>
+                Вага
+            </th>
+            <th>
+                Ціна
+            </th>
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+</table>
+</div>
+
+@section Scripts{
+    <script src="~/js/vinylplayer.js"></script>
+}

@@ -1,0 +1,91 @@
+﻿@model VinylPlayer
+
+<form method="post" asp-action="Upsert" enctype="multipart/form-data">
+	<div class="border p-3 mt-4">
+		<div class="row pb-2">
+	<input asp-for="Id" hidden />
+	<input asp-for="ImageUrl" hidden />
+
+	<div class="row">
+		<div class="col-2 pt-4">
+			<img src="@Model.ImageUrl"
+			width="100%" style="border-radius:5px; border:1px solid #bbb9b9" />
+		</div>
+		<div class="col-10">
+			<div class="border p-3 mt-4 row">
+		<div class="col-12 pb-2">
+			<h2 class="text-primary">@(Model.Id!=0?"Редагувати": "Створити") вініловий програвач</h2>
+			<hr />
+		</div>
+		<div asp-validation-summary="All"></div>
+		<div class="mb-3">
+			<label asp-for="Name">Назва</label>
+			<input asp-for="Name" class="form-control" />
+			<span asp-validation-for="Name" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Description">Опис</label>
+			<textarea asp-for="Description" rows="3" class="form-control"></textarea>
+			<span asp-validation-for="Description" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Connectivity">Тип підключення</label>
+			<input asp-for="Connectivity" class="form-control" />
+			<span asp-validation-for="Connectivity" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Price">Ціна</label>
+			<input asp-for="Price" class="form-control" />
+			<span asp-validation-for="Price" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Speed">Швидкість</label>
+			<input asp-for="Speed" class="form-control" />
+			<span asp-validation-for="Speed" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Motor">Тип мотору</label>
+			<input asp-for="Motor" class="form-control" />
+			<span asp-validation-for="Motor" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Dimensions">Розміри</label>
+			<input asp-for="Dimensions" class="form-control" />
+			<span asp-validation-for="Dimensions" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Weight">Вага</label>
+			<input asp-for="Weight" class="form-control" />
+			<span asp-validation-for="Weight" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="ImageUrl">Фото програвача</label>
+			<input type="file" name="file" class="form-control" />
+		</div>
+		<div class="mb-3">
+			<label asp-for="ManufacturerId">Виробник</label>
+			<select asp-for="ManufacturerId" asp-items="ViewBag.ManufacturerList" class="form-select">
+				<option disabled selected>--Обрати виробника--</option>
+			</select>
+			<span asp-validation-for="ManufacturerId" class="text-danger"></span>
+		</div>
+		@if (Model.Id != 0)
+			{
+				<button type="submit" class="btn btn-primary" style="width:150px">Змінити</button>
+			}
+			else
+			{
+				<button type="submit" class="btn btn-primary" style="width:150px">Створити</button>
+			}
+			
+		<a asp-controller="VinylPlayer" asp-action="Index" class="btn btn-secondary" style="width:150px">
+			Повернутися до списку
+		</a>
+	</div>
+</form>
+
+@section Scripts{
+	@{
+			<partial name="_ValidationScriptsPartial" />
+	}
+}

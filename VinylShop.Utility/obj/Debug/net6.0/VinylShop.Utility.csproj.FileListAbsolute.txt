@@ -1,0 +1,12 @@
+C:\Users\Ivan Bashenko\Desktop\coursework\VinylShop\VinylShop.Utility\bin\Debug\net6.0\VinylShop.Utility.deps.json
+C:\Users\Ivan Bashenko\Desktop\coursework\VinylShop\VinylShop.Utility\bin\Debug\net6.0\VinylShop.Utility.dll
+C:\Users\Ivan Bashenko\Desktop\coursework\VinylShop\VinylShop.Utility\bin\Debug\net6.0\VinylShop.Utility.pdb
+C:\Users\Ivan Bashenko\Desktop\coursework\VinylShop\VinylShop.Utility\obj\Debug\net6.0\VinylShop.Utility.csproj.AssemblyReference.cache
+C:\Users\Ivan Bashenko\Desktop\coursework\VinylShop\VinylShop.Utility\obj\Debug\net6.0\VinylShop.Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ivan Bashenko\Desktop\coursework\VinylShop\VinylShop.Utility\obj\Debug\net6.0\VinylShop.Utility.AssemblyInfoInputs.cache
+C:\Users\Ivan Bashenko\Desktop\coursework\VinylShop\VinylShop.Utility\obj\Debug\net6.0\VinylShop.Utility.AssemblyInfo.cs
+C:\Users\Ivan Bashenko\Desktop\coursework\VinylShop\VinylShop.Utility\obj\Debug\net6.0\VinylShop.Utility.csproj.CoreCompileInputs.cache
+C:\Users\Ivan Bashenko\Desktop\coursework\VinylShop\VinylShop.Utility\obj\Debug\net6.0\VinylShop.Utility.dll
+C:\Users\Ivan Bashenko\Desktop\coursework\VinylShop\VinylShop.Utility\obj\Debug\net6.0\refint\VinylShop.Utility.dll
+C:\Users\Ivan Bashenko\Desktop\coursework\VinylShop\VinylShop.Utility\obj\Debug\net6.0\VinylShop.Utility.pdb
+C:\Users\Ivan Bashenko\Desktop\coursework\VinylShop\VinylShop.Utility\obj\Debug\net6.0\ref\VinylShop.Utility.dll
